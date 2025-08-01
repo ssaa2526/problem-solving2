@@ -1,0 +1,103 @@
+/* 요소 유형과 display */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f0f2f5;
+  padding: 40px;
+}
+
+.container {
+  background: white;
+  width: 500px;
+  margin: auto;
+  padding: 30px;
+  border-radius: 10px;
+  position: relative;
+  z-index: 1;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* label은 인라인 요소지만 display를 블록으로 바꿔 정렬 */
+label {
+  display: block;
+  margin: 10px 0 5px;
+  font-weight: bold;
+}
+
+/* input, select, textarea 기본 정렬 */
+input[type="text"],
+select,
+textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* 버튼 스타일 */
+button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+/* float 예시: 체크박스 수평 정렬 */
+.checkbox-group label {
+  float: left;
+  width: 100px;
+  margin-right: 10px;
+}
+
+/* float 해제 */
+.checkbox-group::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* overflow 예시 */
+textarea {
+  overflow-y: auto;
+}
+
+/* 선택자 응용 */
+input[name^="na"] {
+  border-color: green;
+}
+
+select[name$="period"] {
+  background-color: #f5f5f5;
+}
+
+textarea[name*="feed"] {
+  background-color: #fcfcfc;
+}
+
+/* 의사 클래스 및 의사 요소 */
+button:active {
+  transform: scale(0.98);
+}
+
+label::after {
+  content: " ✎";
+  color: #aaa;
+}
+
+.survey-form > *:nth-child(odd) {
+  background-color: #f9f9f9;
+}
