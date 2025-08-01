@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>웹 개발 학습 설문</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>웹 개발 학습 설문조사</h1>
+    <form class="survey-form">
+      <!-- 이름 -->
+      <label for="name">이름:</label>
+      <input type="text" id="name" name="name" placeholder="이름을 입력하세요" />
+
+      <!-- 학습 언어 -->
+      <label>현재 배우고 있는 언어는?</label>
+      <div class="checkbox-group">
+        <label><input type="checkbox" name="lang" value="html" /> HTML</label>
+        <label><input type="checkbox" name="lang" value="css" /> CSS</label>
+        <label><input type="checkbox" name="lang" value="js" /> JavaScript</label>
+      </div>
+
+      <!-- 학습 기간 -->
+      <label for="period">공부한 기간:</label>
+      <select id="period" name="period">
+        <option>1개월 미만</option>
+        <option>1~3개월</option>
+        <option>3개월 이상</option>
+      </select>
+
+      <!-- 기타 의견 -->
+      <label for="feedback">추가 의견:</label>
+      <textarea id="feedback" name="feedback" rows="4" placeholder="의견을 남겨주세요"></textarea>
+
+      <button type="submit">제출</button>
+    </form>
+  </div>
+</body>
+</html>
