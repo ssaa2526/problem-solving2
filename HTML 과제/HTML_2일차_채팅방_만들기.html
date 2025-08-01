@@ -1,40 +1,33 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8" />
-  <title>웹 개발 학습 설문</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="TE=edge">
+    <title>채팅방 만들기</title>
+    <link href="HTML_2일차_채팅방만들기_과제.css" rel="stylesheet">
 </head>
 <body>
-  <div class="container">
-    <h1>웹 개발 학습 설문조사</h1>
-    <form class="survey-form">
-      <!-- 이름 -->
-      <label for="name">이름:</label>
-      <input type="text" id="name" name="name" placeholder="이름을 입력하세요" />
+    <div class="container">
+        <main class="chat-screen">
+            <section class="chat-screen_bar">
+                <div class="user">
+                    <div class="user_column">
+                        <div class="user_pic"></div>
+                    </div>
+                    <div class="user_column">
+                        <p class="user_nick">친구</p>
+                        <p class="user_conut">2</p>
+                    </div>
+                </div>
+            </section>
+        </main>
 
-      <!-- 학습 언어 -->
-      <label>현재 배우고 있는 언어는?</label>
-      <div class="checkbox-group">
-        <label><input type="checkbox" name="lang" value="html" /> HTML</label>
-        <label><input type="checkbox" name="lang" value="css" /> CSS</label>
-        <label><input type="checkbox" name="lang" value="js" /> JavaScript</label>
-      </div>
-
-      <!-- 학습 기간 -->
-      <label for="period">공부한 기간:</label>
-      <select id="period" name="period">
-        <option>1개월 미만</option>
-        <option>1~3개월</option>
-        <option>3개월 이상</option>
-      </select>
-
-      <!-- 기타 의견 -->
-      <label for="feedback">추가 의견:</label>
-      <textarea id="feedback" name="feedback" rows="4" placeholder="의견을 남겨주세요"></textarea>
-
-      <button type="submit">제출</button>
-    </form>
-  </div>
+        <form class="chat-form">
+            <section class="chat-form_field">
+                <textarea class="chat-from_msg"></textarea>
+                <input type="submit" value="전송" class="chat-form_bt">
+            </section>
+        </form>
+    </div>
 </body>
 </html>
