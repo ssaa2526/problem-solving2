@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>웹 개발 설문지</title>
+    <meta name="description" content="웹 개발 학습자를 위한 설문 양식" />
+  </head>
+  <body>
+    <header>
+      <h1>💬 웹 개발 학습 설문지</h1>
+      <p>웹 개발을 공부하는 여러분의 의견을 듣고 싶어요!</p>
+      <hr>
+    </header>
+
+    <main>
+      <form action="/submit" method="post">
+        <!-- 이름 입력 -->
+        <label>이름: <input type="text" name="name" required /></label><br><br>
+
+        <!-- 이메일 입력 -->
+        <label>이메일: <input type="email" name="email" /></label><br><br>
+
+        <!-- 학습 중인 분야 선택 -->
+        <p>현재 배우고 있는 분야는?</p>
+        <select name="field">
+          <option value="html">HTML</option>
+          <option value="css">CSS</option>
+          <option value="javascript">JavaScript</option>
+        </select><br><br>
+
+        <!-- 난이도 체크 -->
+        <p>어려운 정도는?</p>
+        <label><input type="radio" name="difficulty" value="easy" /> 쉬움</label>
+        <label><input type="radio" name="difficulty" value="normal" /> 보통</label>
+        <label><input type="radio" name="difficulty" value="hard" /> 어려움</label><br><br>
+
+        <!-- 관심 기술 체크박스 -->
+        <p>관심 있는 기술 (복수 선택 가능):</p>
+        <label><input type="checkbox" name="interest" value="frontend" /> 프론트엔드</label>
+        <label><input type="checkbox" name="interest" value="backend" /> 백엔드</label>
+        <label><input type="checkbox" name="interest" value="ai" /> 인공지능</label><br><br>
+
+        <!-- 의견 작성 -->
+        <p>기타 하고 싶은 말:</p>
+        <textarea name="comment" rows="5" cols="40" placeholder="자유롭게 의견을 남겨주세요!"></textarea><br><br>
+
+        <!-- 제출 버튼 -->
+        <input type="submit" value="제출하기" />
+      </form>
+    </main>
+
+    <footer>
+      <hr>
+      <p>&copy; 2025 설문지 예제. <a href="https://example.com">홈페이지</a></p>
+    </footer>
+  </body>
+</html>
